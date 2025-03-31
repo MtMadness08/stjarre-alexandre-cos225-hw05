@@ -23,7 +23,7 @@ public class OrderQueue {
 
     public void OrderTaken(){
         Orders.getFront().ShippedProduct();
-        this.Stock = Stock--;
+        this.Stock--;
         if(Orders.getFront().Quantity <= 0){
             Orders.dequeue();
             QueueSize--;
@@ -32,14 +32,9 @@ public class OrderQueue {
 
     public void SellRemaining(){
         while(this.Stock > 0){
-        Orders.getFront().ShippedProduct();
-        Stock = Stock--;
-        if(Orders.getFront().Quantity <= 0){
-            Orders.dequeue();
-            QueueSize--;
+            OrderTaken();
             }
         }
-    }
     public String toString(){
         return "Quantity: " + Orders.getFront().Quantity;
     }
