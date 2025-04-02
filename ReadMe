@@ -1,0 +1,7 @@
+# Homework_5
+# Name: Alex St. Jarre
+# Date: 4/2/25
+# Class: Cos 225
+# Assignment: Homework 5; Queue, enqueue, dequeue etc
+# Description: 
+# Sets two queues for customers and customer orders. Decreases the order count at the same time as customer count
